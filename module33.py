@@ -8,10 +8,9 @@ from memory_profiler import profile
 # for memory consumption
 @profile
 def my_func():
-    a = [1] * (10 ** 6)
     b = [2] * (5 * 10 ** 7)
     del b
-    return a
+    return [1] * (10 ** 6)
 av = my_func()
 
 # while running it will execute the function-

@@ -13,7 +13,7 @@ async def myTask():
     print("Processing Task")
 
 async def myTaskGenerator():
-    for i in range(5):
+    for _ in range(5):
         asyncio.ensure_future(myTask())
         print(asyncio.Task.all_tasks()) # For list of pending tasks
 
